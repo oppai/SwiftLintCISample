@@ -22,4 +22,3 @@ test:
       -workspace SwiftLintSample.xcworkspace
       -scheme SwiftLintSample
       build build-tests run-tests
-  - git diff HEAD~ --name-only --diff-filter=AMC | grep 'swift$' | xargs -n 1 swiftlint lint --path
