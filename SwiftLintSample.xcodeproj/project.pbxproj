@@ -220,7 +220,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = /usr/local/bin/swiftlint;
+			shellScript = "git diff HEAD~ --name-only --diff-filter=AMC | grep 'swift$' | xargs -n 1 /usr/local/bin/swiftlint lint --path";
 		};
 /* End PBXShellScriptBuildPhase section */
 
